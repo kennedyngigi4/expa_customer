@@ -46,7 +46,7 @@ export const columns: ColumnDef<Invoice>[] = [
             )
         },
         cell: ({row}) => {
-            const status = row.getValue("status");
+            const status = row?.original?.status;
             return (
                 <div className={cn("text-sm text-green-600", status == "UNPAID" && "text-red-600")}>{status}</div>
             );
