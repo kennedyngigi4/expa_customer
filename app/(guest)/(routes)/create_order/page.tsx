@@ -185,10 +185,12 @@ const CreateOrderPage = () => {
     formData.append("price", String(amount));
     
     
-    
+    if (!session?.accessToken) {
+      throw new Error("Access token is missing.");
+    }
 
 
-    const res = await CreateOrder("logistics/client/create_order/", session?.accessToken, formData);
+    const res = await CreateOrder("logistics/client/create_order/", session.accessToken, formData);
     console.log(res)
     if(res.success){
       toast.success(res.message, { position: "top-center" });
