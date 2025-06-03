@@ -171,6 +171,10 @@ const CreateOrderPage = () => {
       formData.append("recipient_latLng", values.recipient_latLng);
     }
 
+    if (!values.length || !values.width || !values.height) {
+      toast.error("Length, width, and height must be provided", { position: "top-center" });
+      throw new Error("Length, width, and height must be provided");
+    }
     // const amount = parseInt((parseFloat(values.length) * parseFloat(values.width) * parseFloat(values.height)) *20000) 
     const amount = Math.round(
       parseFloat(values.length) *
