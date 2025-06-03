@@ -11,9 +11,15 @@ const InvoicesPage = () => {
   const { data:session, status } = useSession();
   const [ invoices, setInvoices ] = useState([]);
 
+  
+
   useEffect(() => {
     const loadInvoices = async() => {
-      const res = await AllServices.get("payments/invoices/", session?.accessToken);
+      if (!session?.accessToken) {
+        throw new Error("Access token is missing.");
+      }
+      
+      const res = await AllServices.get("payments/invoices/", session.accessToken);
       setInvoices(res);
     }
     loadInvoices();

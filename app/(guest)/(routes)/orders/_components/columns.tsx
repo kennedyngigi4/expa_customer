@@ -8,10 +8,11 @@ import Link from "next/link"
 // This type is used to define the shape of our data.
 // You can use a Zod schema here if you want.
 export type Order = {
-    id: string
-    order_id: number
-    recipient_fullname: string
-    pickup_location: string
+    id: string;
+    order_id: number;
+    recipient_fullname: string;
+    pickup_location: string;
+    details: any;
 }
 
 export const columns: ColumnDef<Order>[] = [

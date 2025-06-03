@@ -14,7 +14,10 @@ const NotificationsPage = () => {
 
   useEffect(() => {
     const fetchNotifications = async() => {
-      const resp = await AllServices.get("messaging/client/notifications", session?.accessToken);
+      if (!session?.accessToken) {
+        throw new Error("Access token is missing.");
+      }
+      const resp = await AllServices.get("messaging/client/notifications", session.accessToken);
       setNotifications(resp);
       console.log(resp)
     }

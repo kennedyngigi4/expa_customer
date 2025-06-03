@@ -37,7 +37,7 @@ export const columns: ColumnDef<Notification>[] = [
         },
         cell: ({row}) => {
             const subject = row.original.subject;
-            const message = row.getValue("message");
+            const message = row.original.message;
             return(
                 <div className="flex flex-col">
                     <h1 className="text-orange-500">{subject}</h1>

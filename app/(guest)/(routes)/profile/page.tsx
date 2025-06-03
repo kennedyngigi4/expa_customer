@@ -17,7 +17,10 @@ const ProfilePage = () => {
 
   useEffect(() => {
     const loadData = async() => {
-      const data = await AllServices.get("account/profile/", session?.accessToken);
+      if (!session?.accessToken) {
+        throw new Error("Access token is missing.");
+      }
+      const data = await AllServices.get("account/profile/", session.accessToken);
       setProfileData(data);
     }
     loadData();

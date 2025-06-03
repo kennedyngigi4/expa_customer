@@ -18,7 +18,10 @@ const DashboardPage = () => {
 
   useEffect(() => {
     const loadOrders = async() => {
-      const data = await getAllOrders("logistics/client/my_orders/", session?.accessToken);
+      if (!session?.accessToken) {
+        throw new Error("Access token is missing.");
+      }
+      const data = await getAllOrders("logistics/client/my_orders/", session.accessToken);
       setOrders(data);
     }
     loadOrders();
