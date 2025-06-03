@@ -51,10 +51,10 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         },
 
         async session({ session, token }){
-            session.accessToken = token?.accessToken,
-            session.user.id = token?.id,
-            session.user.email = token?.email,
-            session.user.name = token?.name
+            session.accessToken = token.accessToken as string,
+            session.user.id = token.id,
+            session.user.email = token.email,
+            session.user.name = token.name
             return session
         }
     },

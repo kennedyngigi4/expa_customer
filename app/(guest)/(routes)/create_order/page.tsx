@@ -47,7 +47,7 @@ const formSchema = z.object({
 const deliveryOptions = [ "Intra City", "Inter County", "International"];
 
 const CreateOrderPage = () => {
-  const { data: session, status } = useSession();
+  const { data:session, status } = useSession();
   const [ activeTab, setActiveTab ] = useState("details");
   const [ images, setImages ] = useState<File[]>([]);
   const [previewUrls, setPreviewUrls ] = useState<string[]>([]);
