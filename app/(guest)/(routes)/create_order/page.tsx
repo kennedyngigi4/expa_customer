@@ -737,7 +737,7 @@ const CreateOrderPage = () => {
                       </div>
                       <div>
                         <h1 className="text-slate-500">Amount to Pay</h1>
-                        <p>KSh. {parseInt((parseFloat(formValues?.height) * parseFloat(formValues?.width) * parseFloat(formValues?.length)) * parseInt(20000)).toLocaleString() || "Not provided"}</p>
+                        <p>KSh. {Math.round((parseFloat(formValues?.height) * parseFloat(formValues?.width) * parseFloat(formValues?.length)) * parseInt(20000)).toLocaleString() || 0 }</p>
                       </div>
                     </div>
                   </div>
