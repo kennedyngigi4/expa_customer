@@ -171,7 +171,13 @@ const CreateOrderPage = () => {
       formData.append("recipient_latLng", values.recipient_latLng);
     }
 
-    const amount = parseInt((parseFloat(values.length) * parseFloat(values.width) * parseFloat(values.height)) *20000) 
+    // const amount = parseInt((parseFloat(values.length) * parseFloat(values.width) * parseFloat(values.height)) *20000) 
+    const amount = Math.round(
+      parseFloat(values?.length) *
+      parseFloat(values?.width) *
+      parseFloat(values?.height) *
+      20000
+    );
     formData.append("price", String(amount));
     
     
