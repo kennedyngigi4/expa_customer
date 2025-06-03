@@ -11,7 +11,7 @@ import PaymentConfirmationModal from '@/components/modals/payment-confirmation-m
 const OrderPage = () => {
   const params = useParams();
   const { data:session, status } = useSession()
-  const [ order, setOrder ] = useState({});
+  const [ order, setOrder ] = useState<any>({});
   const [ formattedDate, setformattedDate ] = useState("");
   const [ loaded, setLoaded] = useState(false);
 

@@ -13,7 +13,7 @@ import { Button } from '@/components/ui/button';
 const ProfilePage = () => {
   const { data:session, status } = useSession();
   const [ loading, setLoading ] = useState(false); 
-  const [ profileData, setProfileData ] = useState({});
+  const [ profileData, setProfileData ] = useState<any>({});
 
   useEffect(() => {
     const loadData = async() => {
