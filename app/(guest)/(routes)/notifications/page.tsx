@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
 import { DataTable } from './_components/data-table';
 import { columns } from './_components/columns';
+import FAQS from '../_components/faqs';
 
 const NotificationsPage = () => {
   const router = useRouter();
@@ -25,10 +26,21 @@ const NotificationsPage = () => {
   }, [session]);
 
   return (
-    <section className="flex flex-col min-h-screen w-full justify-start items-start">
-      <div className="mx-auto pb-8">
-        <h1 className="font-semibold py-6">Latest notifications</h1>
+    <section className="flex flex-col min-h-screen w-full justify-start items-start md:px-30 px-12">
+
+      <div className="mx-auto pb-8 w-full">
+        <h1 className="font-bold text-orange-600 text-xl pt-3">Latest notifications</h1>
         <DataTable columns={columns} data={notifications} />
+      </div>
+
+      <div className="w-full pt-8">
+        <h1 className="text-center font-bold text-orange-600 text-xl">Frequently Asked Questions</h1>
+        <p className="text-center text-slate-500">Common Questions abour shipping delivery and courier services</p>
+
+        <div className="pt-1 w-[90%] mx-auto">
+          <FAQS />
+        </div>
+
       </div>
     </section>
   )

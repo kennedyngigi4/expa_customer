@@ -213,7 +213,7 @@ const CreateOrderPage = () => {
 
 
   return (
-    <section className="py-8">
+    <section className="py-8 md:px-30 px-12">
       
       <div>
         <Link href="/orders">

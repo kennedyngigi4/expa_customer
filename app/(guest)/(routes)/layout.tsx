@@ -31,7 +31,7 @@ const GuestLayout = ({ children } : Readonly<{ children: React.ReactNode }>) => 
   return (
     <section>
       <Navbar />
-        <div className="md:px-30 px-12 min-h-screen">
+        <div className="min-h-screen">
           {children}
         </div>  
       <Footer />

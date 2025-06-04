@@ -8,6 +8,7 @@ import { getAllOrders } from '@/lib/api_services';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Truck } from 'lucide-react';
+import FAQS from '../_components/faqs';
 
 const OrdersPage = () => {
   const { data:session, status } = useSession();
@@ -25,7 +26,7 @@ const OrdersPage = () => {
     }, [session])
 
   return (
-    <section className="py-10 flex flex-col">
+    <section className="py-10 flex flex-col md:px-30 px-12">
       <div className="flex flex-row justify-between items-center pb-6">
         <div>
           <h1 className="text-lg font-semibold text-amber-600">My Orders</h1>
@@ -41,6 +42,16 @@ const OrdersPage = () => {
 
       </div>
       <DataTable columns={columns} data={orders} />
+
+      <div className="w-full pt-8">
+        <h1 className="text-center font-bold text-orange-600 text-xl">Frequently Asked Questions</h1>
+        <p className="text-center text-slate-500">Common Questions abour shipping delivery and courier services</p>
+
+        <div className="pt-1 w-[90%] mx-auto">
+          <FAQS />
+        </div>
+
+      </div>
     </section>
   )
 }

@@ -32,7 +32,7 @@ const ProfilePage = () => {
   }
 
   return (
-    <section className="flex flex-col min-h-screen">
+    <section className="flex flex-col min-h-screen md:px-30 px-12">
       <div className="grid md:grid-cols-12 grid-cols-1 gap-3">
         <div className="md:col-span-3 content-start pt-5">
           <div className="w-[150px] h-[150px] rounded-full bg-slate-50 border-2 border-slate-100 relative">

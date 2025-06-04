@@ -47,7 +47,7 @@ const OrderPage = () => {
   }
 
   return (
-    <section className="p-6">
+    <section className="md:px-30 px-12 py-6">
       <div className="">
         <div className="grid md:grid-cols-3 grid-cols-1 gap-10">
           <div>
