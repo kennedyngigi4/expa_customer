@@ -80,7 +80,7 @@ const DashboardPage = () => {
       </div>
 
       
-      <div className="flex flex-col pt-10 md:px-30 px-12 pb-10">
+      <div className="flex flex-col pt-10 md:px-30 px-12 pb-10 max-lg:hidden">
 
         {orders?.length > 0 ? <>
           <h1 className="text-amber-500 text-lg font-semibold">Latest orders </h1>
@@ -128,7 +128,7 @@ const DashboardPage = () => {
       </div>
 
 
-      <div className="w-full py-10 bg-orange-400 md:px-30 px-12">
+      <div className="w-full py-10 bg-orange-400 md:px-30 px-12 max-lg:hidden">
         <div className="w-full pb-8">
           <h1 className="text-center font-bold text-white text-xl">Why you will love us</h1>
           <p className="w-[60%] mx-auto text-center text-white">At Expa we promise that we shall provide our clients with a competitive advantage, by providing excellence in delivery functionality to meet your needs.</p>
@@ -162,7 +162,7 @@ const DashboardPage = () => {
       </div>
 
 
-      <div className="w-full pt-10 md:px-30 px-12">
+      <div className="w-full pt-10 md:px-30 px-12 max-lg:hidden">
         <h1 className="text-center font-bold text-orange-600 text-xl">Frequently Asked Questions</h1>
         <p className="text-center text-slate-500">Common Questions abour shipping delivery and courier services</p>
 

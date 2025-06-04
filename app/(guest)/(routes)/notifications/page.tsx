@@ -33,7 +33,7 @@ const NotificationsPage = () => {
         <DataTable columns={columns} data={notifications} />
       </div>
 
-      <div className="w-full pt-8">
+      <div className="w-full pt-8 max-lg:hidden">
         <h1 className="text-center font-bold text-orange-600 text-xl">Frequently Asked Questions</h1>
         <p className="text-center text-slate-500">Common Questions abour shipping delivery and courier services</p>
 
